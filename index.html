@@ -5,95 +5,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={68720197936e62b9527492c3bc6e930e}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.css" />
-    <title>Whether the Weather</title>
+    <script src="./assets/script.js" defer></script>
+    <title hidden>Whether the Weather</title>
 </head>
 
+<header>
+    <p class="whetherHeader" style="color:rgb(1, 126, 235)">WHETHER</p>
+    <p class="theHeader" style="color:rgb(1, 126, 235)">---THE---</p>
+    <p class="weatherHeader" style="color:rgb(1, 126, 235)">WEATHER</p>
+</header>
 <body>
-    <header>
-        <div class="header">
-            <p>WHETHER THE WEATHER</p>
-        </div>
-    </header>
-
-    <div class="container">
+    <div class="card">
         <div class="header2">
             <h2>Whether you're in...</h2>
-            <div class="">
-                <input type="input" class="searchBar" id="searchBar" placeholder="Enter a city name">
+            <div class="search">
+                <input type="input" class="searchBar" id="searchBar" placeholder="Enter a city name"> <button
+                    type="button" class="mainBtn" id="searchInput">The weather is...</button>
             </div>
-            <button type="button" class="mainBtn" id="searchInput">The weather is...</button>
-        </div>
-        <div>
-            <div class="weather1" style="width: 15rem;">
-                <div class="currentWeather">
-                    <div class="today">
-                        <h2 id="cityName"></h2>
-                        <h2 id="date"></h2>
+            <h2 class="cityName"></h2>
+            <h1 class="temp" style="color:black">Current Temp: <span style="color:aliceblue"></span></h1>
+            <div>
+                <div class="weather1" style="width: 15rem;">
+                    <div class="currentWeather">
+                        <div class="description">Description: <span id="description" style="font-size:larger"></span></div>
+                        <div class="wind">Wind Speed: <span id="wind" style="font-size:larger"></span></div>
+                        <div class="humidity">Oh! The Humidity: <span id="humidity" style="font-size:larger"></span>
+                        </div>
                     </div>
-                    <div>Current Temp: <span id="temp"></span></div>
-                    <div>Wind Speed: <span id="wind"></span></div>
-                    <div>Oh! The Humidity: <span id="humidity"></span></div>
-                    <div>Rain Condition: <span id="condition"></span></div>
                 </div>
-            </div>
-            <div class="weather2">
-                <h2>5-Day Forecast:</h2>
-                <div class="forecast">
-                    <div class="row">
-                        <div class="card" style="width: 10rem;">
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <div id="day2"></div>
-                                    <div>Temp: <span id="day2Temp"></span></div>
-                                    <div>Wind: <span id="day2Wind"></span></div>
-                                    <div>Humidity: <span id="day2Humidity"></span></div>
-                                    <div>Condition: <span id="day2Condition"></span></div>
+                <div class="weather2">
+                    <h2 style="color:black">5-Day Forecast:</h2>
+                    <div class="forecast">
+                        <div class="row">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <div id="day2"></div>
+                                        <div>Temp: <span id="day2Temp"></span></div>
+                                        <div>Wind: <span id="day2Wind"></span></div>
+                                        <div>Humidity: <span id="day2Humidity"></span></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card" style="width: 10rem;">
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <div id='day3'></div>
-                                    <div>Temp: <span id="day3Temp"></span></div>
-                                    <div>Wind: <span id="day3Wind"></span></div>
-                                    <div>Humidity: <span id="day3Humidity"></span></div>
-                                    <div>Condition: <span id="day3Condition"></span></div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <div id='day3'></div>
+                                        <div>Temp: <span id="day3Temp"></span></div>
+                                        <div>Wind: <span id="day3Wind"></span></div>
+                                        <div>Humidity: <span id="day3Humidity"></span></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card" style="width: 10rem;">
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <div id='day4'></div>
-                                    <div>Temp: <span id="day4Temp"></span></div>
-                                    <div>Wind: <span id="day4Wind"></span></div>
-                                    <div>Humidity: <span id="day4Humidity"></span></div>
-                                    <div>Condition: <span id="day4Condition"></span></div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <div id='day4'></div>
+                                        <div>Temp: <span id="day4Temp"></span></div>
+                                        <div>Wind: <span id="day4Wind"></span></div>
+                                        <div>Humidity: <span id="day4Humidity"></span></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card" style="width: 10rem;">
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <div id='day5'></div>
-                                    <div>Temp: <span id="day5Temp"></span></div>
-                                    <div>Wind: <span id="day5Wind"></span></div>
-                                    <div>Humidity: <span id="day5Humidity"></span></div>
-                                    <div>Condition: <span id="day5Condition"></span></div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <div id='day5'></div>
+                                        <div>Temp: <span id="day5Temp"></span></div>
+                                        <div>Wind: <span id="day5Wind"></span></div>
+                                        <div>Humidity: <span id="day5Humidity"></span></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card" style="width: 10rem;">
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <div id='day6'></div>
-                                    <div>Temp: <span id="day6Temp"></span></div>
-                                    <div>Wind: <span id="day6Wind"></span></div>
-                                    <div>Humidity: <span id="day6Humidity"></span></div>
-                                    <div>Condition: <span id="day6Condition"></span></div>
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <div class="card-text">
+                                        <div id='day6'></div>
+                                        <div>Temp: <span id="day6Temp"></span></div>
+                                        <div>Wind: <span id="day6Wind"></span></div>
+                                        <div>Humidity: <span id="day6Humidity"></span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -101,8 +95,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </body>
-<script src="./assets/script.js"></script>
 
 </html>
