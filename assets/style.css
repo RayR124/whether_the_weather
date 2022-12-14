@@ -55,3 +55,7 @@ body {
 .weatherHeader {
     font-size: 100px;
 }
+
+.title {
+    visibility: inherit;
+}
