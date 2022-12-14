@@ -17,8 +17,8 @@ let weather = {
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
 
-    document.querySelector(".cityName").innerText = "Currently in " + name;
-    document.querySelector(".description").innterText = description;
+    document.querySelector(".cityName").innerText = "The weather in " + name + " is...";
+    document.querySelector(".description").innerText = description;
     document.querySelector(".temp").innerText = temp + "°";
     document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
     document.querySelector(".wind").innerText = "Wind Speed: " + speed + "MPH";
@@ -29,7 +29,7 @@ let weather = {
     },
   };
 
-    document.querySelector(".mainBtn").addEventListener("Click", function () {
+    document.querySelector(".mainBtn").addEventListener("click", function () {
       weather.search();
     });
     document.querySelector(".searchBar").addEventListener("keyup", function (event) {
