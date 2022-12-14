@@ -5,10 +5,13 @@ body {
     margin: 0;
     height: 100vh;
     background: #222;
+    background-image: url("https://source.unsplash.com/1600x900/?weather");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card {
-    background-color: rgb(84, 85, 85);
+    background-color: rgb(84, 85, 85, .8);
     padding: 2em;
     border-radius: 30px;
     width: 100%;
@@ -27,7 +30,7 @@ body {
     border: none;
     height: 2em;
     width: 10em;
-    background: #7c7c7c2b;
+    background: #a7a6a62b;
     color: aliceblue;
 }
 
