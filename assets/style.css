@@ -49,14 +49,18 @@ body {
 
 .whetherHeader {
     font-size: 100px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
 }
 
 .theHeader {
     font-size: 75px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
 }
 
 .weatherHeader {
     font-size: 100px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
 }
 
 .title {

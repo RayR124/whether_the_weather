@@ -19,7 +19,7 @@ let weather = {
 
     document.querySelector(".cityName").innerText = "The weather in " + name + " is...";
     document.querySelector(".description").innerText = "Condition: " + description;
-    document.querySelector(".temp").innerText = temp + "°C";
+    document.querySelector(".temp").innerText = temp + "°F";
     document.querySelector(".humidity").innerText = "Oh! the Humidity: " + humidity + "%";
     document.querySelector(".wind").innerText = "Wind Speed: " + speed + "MPH";
     document.body.style.backgroundImage = "url(\"https://source.unsplash.com/1600x900/?" + description + "\")";
