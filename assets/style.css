@@ -50,17 +50,23 @@ body {
 .whetherHeader {
     font-size: 100px;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 
 .theHeader {
     font-size: 75px;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .weatherHeader {
     font-size: 100px;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .title {
