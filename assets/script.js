@@ -29,8 +29,7 @@ let weather = {
     let lat = data.coord.lat;
     let lon = data.coord.lon;
     fetch("https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey + "&units=imperial").then((response) => response.json()).then((data) => displayForecast(data));
-
-
+    
     function displayForecast(data) {
       for (let i = 0; i < 5; i++) {
         const temp2 = data.list[i].main.temp;
@@ -39,7 +38,8 @@ let weather = {
         document.querySelector(`.day${i + 2}Temp`).innerHTML = temp2 + "°F";
         document.querySelector(`.day${i + 2}Humidity`).innerHTML = "Humidity: " + humidity2 + "%";
         document.querySelector(`.day${i + 2}Wind`).innerHTML = "Wind Speed: " + wind2 + "MPH";
-      } forecast.search();
+      }        document.body.style.backgroundImage = "url(\"https://source.unsplash.com/1600x900/?" + description + "\")"; 
+      forecast.search();
     }
   },
 
