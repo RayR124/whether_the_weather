@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const apiKey = process.env.API_KEY
+const apiKey = process.env.API_KEY;
 const searchButton = document.getElementById(".searchBar");
 const geoUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
 const currentUrl = "https://api.openweathermap.org/data/2.5/weather?";
