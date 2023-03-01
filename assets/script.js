@@ -1,5 +1,7 @@
+require('dotenv').config()
+
+const apiKey = process.env.API_KEY
 const searchButton = document.getElementById(".searchBar");
-const apiKey = "68720197936e62b9527492c3bc6e930e";
 const geoUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
 const currentUrl = "https://api.openweathermap.org/data/2.5/weather?";
 const url = "https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=imperial";
